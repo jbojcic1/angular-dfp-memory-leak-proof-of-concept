@@ -1,0 +1,12 @@
+<div>
+  <div style="margin-bottom: 30px">
+    <button mat-raised-button (click)="addMore()">Add 10 more videos</button>
+    <div>Num of videos: {{videos.length}}</div>
+  </div>
+  <div>
+    <div class="video-card" *ngFor="let video of videos; let i = index;">
+     <app-video [video]="video" [index]="i + 1"></app-video>
+     <app-feed-ad *ngIf="(i + 1) % 6 === 0"></app-feed-ad>
+    </div>
+  </div>
+</div>

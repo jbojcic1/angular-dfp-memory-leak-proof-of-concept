@@ -1,0 +1,19 @@
+<div>
+  <a routerLink="/home" style="margin-right: 20px">Home</a>
+  <a routerLink="/other-page-with-ads" style="margin-right: 20px">Other page with ads</a>
+  <a routerLink="/page-without-feed-ads" style="margin-right: 20px">Page without feed ads</a>
+</div>
+
+<div class="body" style="min-height: 400px" fxLayout="column">
+  <!--<div fxLayout="row" fxLayoutAlign="center center">-->
+    <!--<app-leaderboard-ad></app-leaderboard-ad>-->
+  <!--</div>-->
+  <div fxLayout="row">
+    <div fxFlex="75">
+      <router-outlet></router-outlet>
+    </div>
+    <app-sidebar fxFlex="25"></app-sidebar>
+  </div>
+</div>
+
+<div>This is footer!</div>
